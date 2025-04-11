@@ -3,40 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кнопка amoCRM</title>
+    <title>Тестовая форма amoCRM</title>
 </head>
 <body>
-    <h1>Добро пожаловать на сайт</h1>
-    <p>Ниже размещена кнопка amoCRM:</p>
-    
-    <!-- Основная кнопка amoCRM -->
+    <h1>Тест формы amoCRM (внешний скрипт)</h1>
     <button id="amoButton">Открыть форму</button>
 
-    <!-- Подключение amoCRM формы -->
-    <script>
-        !function(a,m,o,c,r,m){
-            a[o+c]=a[o+c] || { 
-                setMeta: function(p) { 
-                    this.params = (this.params || []).concat([p]) 
-                }
-            };
-            a[o+r]=a[o+r] || function(f) { 
-                a[o+r].f = (a[o+r].f || []).concat([f]) 
-            };
-            a[o+r]({
-                id: "1511550",
-                hash: "21545fef211df194bdd6fa8e3383d16d",
-                locale: "ru"
-            });
-            a[o+m]=a[o+m] || function(f, k) { 
-                a[o+m].f = (a[o+m].f || []).concat([[f, k]]) 
-            };
-        }(window,0,"amo_forms_","params","load","loaded");
-    </script>
-    <script id="amoforms_script_1511550" async charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1743665973"></script>
+    <div class="form">
+        <script>
+            !function(a,m,o,c,r,m){
+                a[o+c]=a[o+c] || {
+                    setMeta: function(p) {
+                        this.params = (this.params || []).concat([p]);
+                    }
+                };
+                a[o+r]=a[o+r] || function(f) {
+                    a[o+r].f = (a[o+r].f || []).concat([f]);
+                };
+                a[o+r]({
+                    id: "1511550",
+                    hash: "21545fef211df194bdd6fa8e3383d16d",
+                    locale: "ru"
+                });
+                a[o+m]=a[o+m] || function(f, k) {
+                    a[o+m].f = (a[o+m].f || []).concat([[f, k]]);
+                };
+            }(window,0,"amo_forms_","params","load","loaded");
+        </script>
+        <script id="amoforms_script_1511550" async charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1743665973"></script>
+    </div>
 
     <script>
-        // Открытие формы по нажатию на кнопку
         document.getElementById("amoButton").addEventListener("click", function () {
             if (window.amo_forms_load && window.amo_forms_load.f) {
                 window.amo_forms_load.f.forEach(function (f) {
