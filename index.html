@@ -10,11 +10,39 @@
     <p>Ниже размещена кнопка amoCRM:</p>
     
     <!-- Основная кнопка amoCRM -->
-    <button id="amoButton">Открыть чат</button>
-    
+    <button id="amoButton">Открыть форму</button>
+
+    <!-- Подключение amoCRM формы -->
     <script>
-        document.getElementById("amoButton").addEventListener("click", function() {
-            (function(a,m,o,c,r,m){a[m]={id:"414022",hash:"238560bf7c60814370aff98b1a4167296a7602328256143922177bfcc6756fc2",locale:"ru",inline:true,setMeta:function(p){this.params=(this.params||[]).concat([p])}};a[o]=a[o]||function(){(a[o].q=a[o].q||[]).push(arguments)};var d=a.document,s=d.createElement('script');s.async=true;s.id=m+'_script';s.src='https://gso.amocrm.ru/js/button.js';d.head&&d.head.appendChild(s)}(window,0,'amoSocialButton',0,0,'amo_social_button'));
+        !function(a,m,o,c,r,m){
+            a[o+c]=a[o+c] || { 
+                setMeta: function(p) { 
+                    this.params = (this.params || []).concat([p]) 
+                }
+            };
+            a[o+r]=a[o+r] || function(f) { 
+                a[o+r].f = (a[o+r].f || []).concat([f]) 
+            };
+            a[o+r]({
+                id: "1511550",
+                hash: "21545fef211df194bdd6fa8e3383d16d",
+                locale: "ru"
+            });
+            a[o+m]=a[o+m] || function(f, k) { 
+                a[o+m].f = (a[o+m].f || []).concat([[f, k]]) 
+            };
+        }(window,0,"amo_forms_","params","load","loaded");
+    </script>
+    <script id="amoforms_script_1511550" async charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1743665973"></script>
+
+    <script>
+        // Открытие формы по нажатию на кнопку
+        document.getElementById("amoButton").addEventListener("click", function () {
+            if (window.amo_forms_load && window.amo_forms_load.f) {
+                window.amo_forms_load.f.forEach(function (f) {
+                    if (typeof f === 'function') f();
+                });
+            }
         });
     </script>
 </body>
