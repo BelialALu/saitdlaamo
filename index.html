@@ -1,38 +1,64 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Тестовая форма amoCRM</title>
+  <meta charset="UTF-8">
+  <title>Форма amoCRM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .form-wrapper {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      max-width: 600px;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
-    <h1>Тест формы amoCRM (внешний скрипт)</h1>
-    <button id="amoButton">Открыть форму</button>
 
-    <div class="form">
-        <script>
-            !function(a,m,o,c,r,m){
-                a[o+c]=a[o+c] || {
-                    setMeta: function(p) {
-                        this.params = (this.params || []).concat([p]);
-                    }
-                };
-                a[o+r]=a[o+r] || function(f) {
-                    a[o+r].f = (a[o+r].f || []).concat([f]);
-                };
-                a[o+r]({
-                    id: "1452078",
-                    hash: "21a81a0f1d64db84c5d234afc3c9a78f",
-                    locale: "ru"
-                });
-                a[o+m]=a[o+m] || function(f, k) {
-                    a[o+m].f = (a[o+m].f || []).concat([[f, k]]);
-                };
-            }(window,0,"amo_forms_","params","load","loaded");
-        </script>
-        <script id="amoforms_script_1452078" async charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1747820410"></script>
-    </div>
+  <h1>Свяжитесь с нами</h1>
+  <div class="form-wrapper">
+    <!-- amoCRM форма -->
+    <script>
+      !function(a,m,o,c,r,m){
+        a[o+c]=a[o+c]||{
+          setMeta:function(p){
+            this.params=(this.params||[]).concat([p])
+          }
+        },
+        a[o+r]=a[o+r]||function(f){
+          a[o+r].f=(a[o+r].f||[]).concat([f])
+        },
+        a[o+r]({
+          id:"1452078",
+          hash:"21a81a0f1d64db84c5d234afc3c9a78f",
+          locale:"ru"
+        }),
+        a[o+m]=a[o+m]||function(f,k){
+          a[o+m].f=(a[o+m].f||[]).concat([[f,k]])
+        }
+      }(window,0,"amo_forms_","params","load","loaded");
+    </script>
+    <script id="amoforms_script_1452078" async charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1751091819"></script>
+  </div>
 
-    
 </body>
 </html>
