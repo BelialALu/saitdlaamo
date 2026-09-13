@@ -3,46 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>amoCRM test</title>
+    <title>Оставить заявку</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Тест amoCRM кнопки</h1>
+    <div class="container">
+        <h1>Оставьте заявку</h1>
 
-    <p>Если всё работает — справа снизу появится кнопка.</p>
-
-
-    <script>
-        (function(a,m,o,c,r,m){
-            a[m]={
-                id:"448625",
-                hash:"6a4e9eae8d94d4e7ef3cf1576c7e7e3d38817a80aa49af0365c1434ffbc0f1d7",
-                locale:"ru",
-                inline:false,
-                setMeta:function(p){
-                    this.params=(this.params||[]).concat([p])
+        <!-- Форма amoCRM -->
+        <script>
+            !function(a,m,o,c,r,m){
+                a[o+c]=a[o+c]||{
+                    setMeta:function(p){
+                        this.params=(this.params||[]).concat([p])
+                    }
+                },
+                a[o+r]=a[o+r]||function(f){
+                    a[o+r].f=(a[o+r].f||[]).concat([f])
+                },
+                a[o+r]({
+                    id:"1666574",
+                    hash:"260ba1b1e1f1ac338fdd3480c1a8e0ce",
+                    locale:"ru"
+                }),
+                a[o+m]=a[o+m]||function(f,k){
+                    a[o+m].f=(a[o+m].f||[]).concat([[f,k]])
                 }
-            };
+            }(window,0,"amo_forms_","params","load","loaded");
+        </script>
 
-            a[o]=a[o]||function(){
-                (a[o].q=a[o].q||[]).push(arguments)
-            };
+        <script
+            id="amoforms_script_1666574"
+            async="async"
+            charset="utf-8"
+            src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1789316304">
+        </script>
 
-            a[o+'Config']=a[o+'Config']||{};
-            a[o+'Config'].hidden=false;
-
-            var d=a.document,
-                s=d.createElement('script');
-
-            s.async=true;
-            s.id=m+'_script';
-            s.src='https://gso.amocrm.ru/js/button.js';
-
-            d.body.appendChild(s);
-
-        })(window,0,'amoSocialButton',0,0,'amo_social_button');
-    </script>
+    </div>
 
 </body>
 </html>
